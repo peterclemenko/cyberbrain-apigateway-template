@@ -4,6 +4,7 @@ WORKDIR /GraphQL_FastAPI_server
 # Cache and Install dependencies
 COPY requirements.txt requirements.txt
 RUN apt update
+RUN apt-get dist upgrade
 RUN apt-get install -y build-essential
 RUN apt-get install -y python3-pip
 RUN apt install -y postgresql postgresql-contrib 
