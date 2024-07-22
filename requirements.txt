@@ -34,7 +34,7 @@ python-multipart==0.0.5
 PyYAML==6.0
 six==1.16.0
 sniffio==1.2.0
-SQLAlchemy==1.4.39
+SQLAlchemy==1.4.52
 starlette==0.19.1
 strawberry-graphql==0.117.1
 tomli==2.0.1
