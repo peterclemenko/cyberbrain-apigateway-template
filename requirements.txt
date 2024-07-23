@@ -1,5 +1,5 @@
 ﻿alembic==1.13.2
-anyio==3.6.1
+anyio==3.7.1
 asyncpg==0.29.0
 atomicwrites==1.4.1
 attrs==21.4.0
