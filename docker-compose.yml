@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  postgres_db_cyberbrain_graphql_gateway:
+  postgres_db_template_cyberbrain_graphql_gateway:
     image: postgres:16-alpine
     env_file:
       - envs/.env
