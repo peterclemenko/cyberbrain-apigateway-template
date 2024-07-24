@@ -28,7 +28,7 @@ services:
     command:
       sh -c "python3 main.py"
     depends_on:
-      - db_graphql
+      - postgres_db_template_cyberbrain_graphql_gateway
 
 networks:
   nats:
