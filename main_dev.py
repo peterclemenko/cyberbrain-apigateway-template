@@ -14,4 +14,5 @@ if __name__ == "__main__":
     print("Database populated.")
 
     print("Starting server...")
-    uvicorn.run("main:application", host=settings.HOST_URL, port=settings.HOST_PORT, reload=True)
+    uvicorn.run("main:application", host=settings.HOST_URL,
+                port=settings.HOST_PORT, reload=True)

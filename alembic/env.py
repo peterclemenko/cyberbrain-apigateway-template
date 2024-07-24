@@ -1,4 +1,7 @@
 from __future__ import with_statement
+from src.graphql.core.config import settings
+from src.graphql.models import StickyNotes, User
+from src.graphql.models import Base
 from logging.config import fileConfig
 import load_env
 from sqlalchemy import engine_from_config
@@ -26,9 +29,6 @@ target_metadata = None
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
-from src.graphql.models import Base
-from src.graphql.models import StickyNotes, User
-from src.graphql.core.config import settings
 target_metadata = [Base.metadata]
 
 database_url = f"postgresql://{settings.POSTGRES_USER}:{settings.POSTGRES_PASSWORD}@{settings.POSTGRES_SERVER}:{settings.POSTGRES_PORT}/{settings.POSTGRES_DB}"
@@ -39,11 +39,13 @@ config.set_main_option(
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
+
 def get_url():
     """
     This function is used to get the database url from the environment variable
     """
     return database_url
+
 
 def run_migrations_offline():
     """Run migrations in 'offline' mode.
@@ -90,7 +92,6 @@ def run_migrations_online():
 
         with context.begin_transaction():
             context.run_migrations()
-
 
 
 if context.is_offline_mode():

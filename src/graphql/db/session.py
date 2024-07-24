@@ -16,6 +16,7 @@ async_session = sessionmaker(
     autoflush=False,
 )
 
+
 @asynccontextmanager
 async def get_session() -> AsyncGenerator[AsyncSession, None]:
     async with async_session() as session:

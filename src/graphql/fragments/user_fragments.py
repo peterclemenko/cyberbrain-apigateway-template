@@ -4,4 +4,5 @@ from src.graphql.scalars.user_scalar import AddUser, UserDeleted, UserExists, Us
 
 
 AddUserResponse = strawberry.union("AddUserResponse", (AddUser, UserExists))
-DeleteUserResponse = strawberry.union("DeleteUserResponse", (UserDeleted,UserNotFound, UserIdMissing))
+DeleteUserResponse = strawberry.union(
+    "DeleteUserResponse", (UserDeleted, UserNotFound, UserIdMissing))
