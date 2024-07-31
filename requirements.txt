@@ -42,4 +42,4 @@ typing_extensions==4.12.2
 uvicorn==0.30.3
 watchfiles==0.15.0
 websockets==10.4
-zipp==3.8.0
+zipp==3.19.2
