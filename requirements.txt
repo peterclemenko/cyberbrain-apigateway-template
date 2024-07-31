@@ -40,6 +40,6 @@ strawberry-graphql==0.117.1
 tomli==2.0.1
 typing_extensions==4.12.2
 uvicorn==0.30.3
-watchfiles==0.15.0
+watchfiles==0.22.0
 websockets==10.4
 zipp==3.19.2
