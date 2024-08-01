@@ -1,7 +1,20 @@
-steps:
-- uses: actions/checkout@v2
-  with:
-    fetch-depth: 0
-    ref: ${{ github.head_ref }} // necessary for pull request workflow trigger
-- name: trufflehog-actions-scan
-  uses: edplato/trufflehog-actions-scan@master
+name: Trufflehog Secrets scan
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+            ref: ${{ github.head_ref }} // necessary for pull request workflow trigger
+        - name: trufflehog-actions-scan
+          uses: edplato/trufflehog-actions-scan@master
